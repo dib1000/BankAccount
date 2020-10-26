@@ -13,4 +13,10 @@ public class BankAccount {
   public int getAccountID() {
     return accountID;
   }
+  //public String getPassword() { //for testing setPassword
+    //return password;
+  //}
+  public void setPassword(String newPass) {
+    password = newPass;
+  }
 }
