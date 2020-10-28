@@ -14,5 +14,12 @@ public class Tester {
     System.out.println(b3.getBalance()); //should be same as top
     System.out.println(b3.getAccountID()); //should be 33
     //System.out.println(b2.getPassword()); (testing setPassword)
+    System.out.println();
+    System.out.println(b1.withdraw(42.0)); //should return true
+    System.out.println(b2.withdraw(1.0)); //should return true
+    System.out.println(b3.withdraw(42.1)); //should return false
+    System.out.println(b1.getBalance()); //should be 0.1
+    System.out.println(b2.getBalance()); //should be same balance as line 4
+    System.out.println(b3.getBalance()); //balance should not change
   }
 }

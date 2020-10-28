@@ -25,4 +25,11 @@ public class BankAccount {
     }
     return balance>=0.0;
   }
+  public boolean withdraw(double amount) {
+    double oldBal = balance;
+    if(amount<=balance) {
+      balance-=amount;
+    }
+    return oldBal!=balance;
+  }
 }
