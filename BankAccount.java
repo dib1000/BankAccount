@@ -20,16 +20,22 @@ public class BankAccount {
     password = newPass;
   }
   public boolean deposit(double amount) {
-    if(balance>=0.0) {
+    if(amount>=0.0) {
       balance+=amount;
     }
-    return balance>=0.0;
+    return amount>=0.0;
   }
   public boolean withdraw(double amount) {
+    if (amount<0.0) {
+      return false;
+    }
     double oldBal = balance;
     if(amount<=balance) {
       balance-=amount;
     }
     return oldBal!=balance;
+  }
+  public String toString() {
+    return accountID + "\t" + balance;
   }
 }
