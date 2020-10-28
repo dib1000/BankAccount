@@ -24,5 +24,12 @@ public class Tester {
     System.out.println(b1.getBalance());
     System.out.println(b2.getBalance());
     System.out.println(b3.getBalance());
+    System.out.println();
+    BankAccount b4 = new BankAccount(45, "help");
+    BankAccount b5 = new BankAccount(56, "cheese");
+    System.out.println(b4.deposit(300.0));
+    System.out.println(b4.transferTo(b5,100.0,"help"));
+    System.out.println(b4);
+    System.out.println(b5);
   }
 }
