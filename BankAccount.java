@@ -2,8 +2,8 @@ public class BankAccount {
   private double balance;
   private int accountID;
   private String password;
-  public BankAccount(double b, int a, String p) {
-    balance = b;
+  public BankAccount(int a, String p) {
+    balance = 0.0;
     accountID = a;
     password = p;
   }
@@ -33,7 +33,7 @@ public class BankAccount {
     if(amount<=balance) {
       balance-=amount;
     }
-    return oldBal!=balance;
+    return amount<=oldBal;
   }
   public String toString() {
     return accountID + "\t" + balance;
